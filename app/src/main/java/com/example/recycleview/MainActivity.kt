@@ -2,6 +2,7 @@ package com.example.recycleview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -18,12 +19,19 @@ class MainActivity : AppCompatActivity() {
         rvSekolah.setHasFixedSize(true)
 
         list.addAll(DataSekolah.listData)
-        showRecyclerList()
+//        showRecyclerList()
+        showRecyclerGrid()
     }
 
     private fun showRecyclerList() {
         rvSekolah.layoutManager = LinearLayoutManager(this)
         val listSekolahAdapter = ListSekolahAdapter(list)
         rvSekolah.adapter = listSekolahAdapter
+    }
+
+    private fun showRecyclerGrid() {
+        rvSekolah.layoutManager = LinearLayoutManager(this)
+        val gridSekolahAdapter = GridSekolahAdapter(list)
+        rvSekolah.adapter = gridSekolahAdapter
     }
 }

@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/rv_sekolah"
+        android:padding="4dp"
         tools:listitem="@layout/item_sekolah">
 
     </androidx.recyclerview.widget.RecyclerView>
