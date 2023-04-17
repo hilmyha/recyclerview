@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         list.addAll(DataSekolah.listData)
 //        showRecyclerList()
-        showRecyclerGrid()
+//        showRecyclerGrid()
+        showRecyclerCardView()
     }
 
     private fun showRecyclerList() {
@@ -33,5 +34,11 @@ class MainActivity : AppCompatActivity() {
         rvSekolah.layoutManager = LinearLayoutManager(this)
         val gridSekolahAdapter = GridSekolahAdapter(list)
         rvSekolah.adapter = gridSekolahAdapter
+    }
+
+    private fun showRecyclerCardView() {
+        rvSekolah.layoutManager = LinearLayoutManager(this)
+        val cardSekolahAdapter = CardSekolahAdapter(list)
+        rvSekolah.adapter = cardSekolahAdapter
     }
 }
